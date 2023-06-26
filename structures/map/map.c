@@ -47,3 +47,13 @@ int map_key_exists(map_T* map, char* key)
 
     return 0;
 }
+
+int map_is_empty(map_T* map, char* key)
+{
+    if (map->len == 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
