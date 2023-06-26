@@ -69,3 +69,14 @@ char** file_reader_get_lines_array(file_reader_T* file_reader)
     fclose(file);
     return lines_array;
 }
+
+char* file_reader_get_line(file_reader_T* file_reader, size_t line)
+{
+    if (line > file_reader_get_line_count(file_reader))
+    {
+        printf("Requested line: %ld, does not exist on file: %s", line, file_reader->filepath);
+        exit(1);
+    }
+
+    return file_reader_get_lines_array(file_reader)[line];
+}
