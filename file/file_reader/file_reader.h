@@ -1,5 +1,5 @@
-#ifndef FILE_FILEREADER_H
-#define FILE_FILEREADER_H
+#ifndef CUTIL_FILE_FILEREADER_H
+#define CUTIL_FILE_FILEREADER_H
 
 #include <stdlib.h>
 
