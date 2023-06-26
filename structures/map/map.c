@@ -37,5 +37,13 @@ void* map_get(map_T* map, char* key)
 
 int map_key_exists(map_T* map, char* key)
 {
+     for (size_t i = 0; i < map->len; i++)
+    {
+        if (strcmp((char*)vector_get(map->keys, i), key) == 0)
+        {
+            return 1;
+        }
+    }
 
+    return 0;
 }
