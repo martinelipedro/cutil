@@ -13,5 +13,7 @@ typedef struct STRING_STRUCT
 
 string_T* init_string(char* initial_string);
 
+void string_append_char(string_T* string, char c);
+
 
 #endif

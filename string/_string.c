@@ -11,3 +11,12 @@ string_T* init_string(char* initial_string)
 
     return string;
 }
+
+void string_append_char(string_T* string, char c)
+{
+    string->len++;
+    string->size += sizeof(char);
+    strncat(string->buffer, &c, 1);
+
+    return string;
+}
