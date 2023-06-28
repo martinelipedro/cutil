@@ -20,3 +20,11 @@ void string_append_char(string_T* string, char c)
 
     return string;
 }
+
+void string_append_string_type(string_T* dest, string_T* src)
+{
+    dest->size += src->size;
+    dest->len += src->len;
+    dest->buffer = realloc(dest->buffer, dest->size + src->size);
+    dest->buffer = strcat(dest->buffer, src->buffer);
+}
